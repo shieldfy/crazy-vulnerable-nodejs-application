@@ -29,7 +29,6 @@ router.post('/customers/register', async (req, res) => {
 // Vulnerable search function
 router.post('/customers/find', async (req, res) => {
 
-
     const client = await MongoClient.connect(url, { useNewUrlParser: true })
         .catch(err => { console.log(err); });
     if (!client) {
@@ -71,3 +70,5 @@ router.post('/customers/login', async (req, res) => {
 
  
 })
+
+module.exports = router
