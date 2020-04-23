@@ -14,7 +14,8 @@ router.post('/customers/register', (req, res) => {
     if (err) throw err;
     var dbo = db.db(config.MONGODB_DB_NAME);
     var myobj = { name: req.body.name, address: req.body.address };
-    dbo.collection("customers").insertOne(myobj, function (err) {
+    var customers = dbo.collection("customers")
+    customers.insertOne(myobj, function (err) {
       if (err) throw err;
       console.log("user registered");
       db.close();
@@ -30,7 +31,8 @@ router.post('/customers/find', (req, res) => {
     if (err) throw err;
     var dbo = db.db(config.MONGODB_DB_NAME);
     var myobj = { name: req.body.name };
-    dbo.collection("customers").findOne(myobj, function (err, result) {
+    var customers = dbo.collection("customers")
+    customers.findOne(myobj, function (err, result) {
       if (err) throw err;
       db.close();
       res.json(result)
@@ -46,8 +48,9 @@ router.post('/customers/login', (req, res) => {
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db(config.MONGODB_DB_NAME);
+    var customers = dbo.collection("customers")
     var myobj = { email: req.body.email, password: req.body.password };
-    dbo.collection("customers").findOne(myobj, function (err, result) {
+    customers.findOne(myobj, function (err, result) {
       if (err) throw err;
       db.close();
       res.json(result)
