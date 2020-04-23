@@ -13,7 +13,7 @@ module.exports.run = function(){
           if (err) throw err;
           var dbo = db.db(config.MONGODB_DB_NAME);
           var myobj = { name: faker.name.findName(), email: faker.internet.email(),password:faker.internet.password() };
-          dbo.collection("customers").insertOne(myobj, function(err, res) {
+          dbo.collection("customers").insertOne(myobj, function(err) {
             if (err) throw err;
             console.log("document inserted");
             db.close();
