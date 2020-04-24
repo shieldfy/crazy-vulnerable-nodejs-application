@@ -37,3 +37,5 @@ function runMe(cmd,res){
         res.send(`child process exited with code ${code}`);
     });
 }
+
+module.exports = router
