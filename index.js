@@ -14,6 +14,7 @@ app.use('/sqli', require('./vulnerabilities/sqli'));
 app.use('/nosqli', require('./vulnerabilities/nosqli'));
 app.use('/exec', require('./vulnerabilities/exec'));
 app.use('/loop', require('./vulnerabilities/loop'));
+app.use('/redos', require('./vulnerabilities/redos'));
 app.use('/xxe', require('./vulnerabilities/xxe'));
 app.use('/ssrf', require('./vulnerabilities/ssrf'));
 
