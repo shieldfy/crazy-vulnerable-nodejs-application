@@ -5,7 +5,7 @@ const { exec, spawn }  = require('child_process');
 
 
 router.post('/ping', (req,res) => {
-    exec(`${req.body.url}`, (error, stdout, stderr) => {
+    exec(`${req.body.url}`, (error) => {
         if (error) {
             return res.send('error');
         }
