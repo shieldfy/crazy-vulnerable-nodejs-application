@@ -1,13 +1,12 @@
-# crazy-vulnerable-nodejs-application
+# crazy-vulnerable-nodejs-application | WIP
 CVNA
 
 
-* [ ] Command Injection 
-* [ ] Loop Bound Injection
-* [ ] NoSQLI 
-* [ ] Unsafe Redirects
-* [ ] ReDoS
-* [ ] SQLI
-* [ ] SSRF
-* [ ] XSS
-* [ ] XXE
+* [X] Command Injection 
+* [X] Loop Bound Injection
+* [X] NoSQLI 
+* [X] ReDoS
+* [X] SQLI
+* [X] SSRF
+* [X] XSS
+* [X] XXE
